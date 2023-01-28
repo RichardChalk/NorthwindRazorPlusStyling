@@ -1,0 +1,27 @@
+﻿@page
+@model NorthwindRazorPlusStyling.Pages.NorthwindModel
+@{
+}
+
+<h1>Alla Categories</h1>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Category Name</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var cat in Model.Categories)
+        {
+            <tr>
+                <td>@cat.Id</td>
+                <td>@cat.Name</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
