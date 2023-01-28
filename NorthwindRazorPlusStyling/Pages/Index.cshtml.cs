@@ -39,7 +39,7 @@ namespace NorthwindRazorPlusStyling.Pages
 
         public void OnGet()
         {
-            Categories = _dbContext.Categories.Select(c => new CategoryViewModel
+            Categories = _dbContext.Categories.Take(6).Select(c => new CategoryViewModel
             {
                 Id = c.CategoryId,
                 Name = c.CategoryName,
